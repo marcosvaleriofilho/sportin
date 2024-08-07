@@ -4,7 +4,7 @@
         <h2>{{ title }}</h2>
         <ng-content> </ng-content>
         <div class="btn-wrapper">
-            <button class="btn-primary">
+            <button class="btn-primary" (click)="submit()" [disabled]="disablePrimaryBtn">
                 {{ primaryBtnText }}
             </button>
             
@@ -14,7 +14,7 @@
                 <div></div>
             </div>
             
-            <button class="btn-secondary"> 
+            <button class="btn-secondary" (click)="navigate()"> 
                 {{ secondaryBtnText }}
             </button>
 
