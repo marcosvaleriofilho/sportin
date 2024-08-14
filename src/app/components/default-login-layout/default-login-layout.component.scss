@@ -17,7 +17,6 @@ main {
 
     .main-section {
         gap: 8px;
-
         flex-grow: 1;
         background-color: $bg-color;
     }
@@ -44,7 +43,7 @@ main {
             width: 100%;
             gap: 30px;
 
-            .divider{
+            .divider {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -56,7 +55,7 @@ main {
                 font-weight: 400;
                 text-transform: uppercase;
 
-                div{
+                div {
                     flex-grow: 1;
                     height: 2px;
                     background-color: $bg-color;
@@ -80,7 +79,7 @@ main {
                 &.btn-primary {
                     background-color: $primary-color;
                     color: white;
-                    box-shadow: 0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.20000000298023224);
+                    box-shadow: 0px 8px 12px rgba(148.23004603385925, 64.33935597538948, 255, 0.2);
                 }
 
                 &.btn-secondary {
@@ -88,6 +87,52 @@ main {
                     color: $primary-color;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .form-section {
+        flex-grow: 1;
+        padding: 0 20px;
+    }
+
+    .btn-wrapper {
+        button {
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+
+        .divider {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    .form-section {
+        padding: 0 15px;
+    }
+
+    .btn-wrapper {
+        gap: 20px;
+
+        button {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+
+        .divider {
+            font-size: 12px;
         }
     }
 }
